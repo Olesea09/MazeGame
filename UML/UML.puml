@@ -1,0 +1,171 @@
+@startuml
+
+title UML Maze Game (Model-View-Controller)
+
+package "Model" {
+    class GameMap {
+      +isCollision(x: float, y: float): bool
+      +getPlayer(): Player
+    }
+
+    abstract class Entity {
+      +render(batch: SpriteBatch)
+      +dispose()
+    }
+
+    interface Movable {
+      +move(deltaX: float, deltaY: float)
+    }
+
+    class Player {
+      +move(deltaX: float, deltaY: float)
+      +handleInput(gameMap: GameMap)
+      +render(batch: SpriteBatch)
+    }
+
+    class Enemy {
+      +update(deltaTime: float, gameMap: GameMap)
+      +render(batch: SpriteBatch)
+    }
+
+    class Fruit {
+      +render(batch: SpriteBatch)
+    }
+
+    class Tile {
+      +render(batch: SpriteBatch)
+    }
+
+    class EndZone {
+      +isPlayerOnEnd(playerX: float, playerY: float): bool
+    }
+
+    interface LevelInterface {
+      +load()
+      +isUnlocked(): bool
+      +setUnlocked(unlocked: bool)
+      +isCompleted(): bool
+      +setCompleted(completed: bool)
+      +getMapFile(): String
+    }
+
+    class Level {
+      +load()
+      +isUnlocked(): bool
+      +setUnlocked(unlocked: bool)
+      +isCompleted(): bool
+      +setCompleted(completed: bool)
+      +getMapFile(): String
+      +getGameMap(): GameMap
+    }
+}
+
+package "View" {
+    interface GameScreen {
+      +render(batch: SpriteBatch)
+      +show()
+      +hide()
+      +dispose()
+    }
+
+    abstract class EndScreen {
+      +render()
+      +dispose()
+    }
+
+    class VictoryScreen {
+      +render(batch: SpriteBatch)
+      +dispose()
+      +playVictoryMusic()
+    }
+
+    class GameOverScreen {
+      +render(batch: SpriteBatch)
+      +dispose()
+      +playGameOverMusic()
+    }
+
+    class HUD {
+      +render(batch: SpriteBatch, currentLives: int)
+    }
+
+    class LoadingScreen {
+      +render(batch: SpriteBatch)
+      +isReadyToStart(): bool
+    }
+
+    class LevelScreen {
+      +render(batch: SpriteBatch)
+      +dispose()
+    }
+
+    class LevelSelectScreen {
+      +render(batch: SpriteBatch)
+      +dispose()
+    }
+
+    class LevelRenderer {
+      +render(batch: SpriteBatch, offsetX: float, offsetY: float, scale: float)
+      +dispose()
+    }
+}
+
+package "Controller" {
+    class Main {
+      +create()
+      +render()
+      +dispose()
+    }
+
+    class ScreenManager {
+      +setScreen(screen: GameScreen)
+      +render(batch: SpriteBatch)
+      +dispose()
+    }
+
+    class LevelManager {
+      +loadLevel(level: int)
+      +resetGame()
+      +unlockNextLevel()
+    }
+
+    class AudioManager {
+      +playBackgroundMusic()
+      +playEnemyHitSound()
+      +playFruitCollectedSound()
+      +playVictoryMusic()
+      +playGameOverMusic()
+    }
+}
+
+' Relationships
+Main o-- ScreenManager
+ScreenManager --> GameScreen
+Main --> AudioManager
+GameMap o-- Player
+GameMap o-- Enemy
+GameMap o-- Fruit
+GameMap *-- Tile
+GameMap o-- EndZone
+LevelScreen o-- HUD
+LevelScreen o-- LevelRenderer
+VictoryScreen --|> EndScreen
+GameOverScreen --|> EndScreen
+EndScreen --|> GameScreen
+LevelScreen --|> GameScreen
+LoadingScreen --|> GameScreen
+LevelSelectScreen --|> GameScreen
+
+Player --|> Entity
+Player --|> Movable
+Enemy --|> Entity
+Enemy --|> Movable
+Fruit --|> Entity
+
+LevelManager *-- LevelInterface
+Level --|> LevelInterface
+LevelManager o-- GameMap
+LevelScreen --> LevelRenderer
+VictoryScreen --> AudioManager
+GameOverScreen --> AudioManager
+@enduml

@@ -1,0 +1,199 @@
+{ "compressionlevel":-1,
+ "height":22,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1,
+            1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1,
+            1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1,
+            1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+         "height":22,
+         "id":1,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":22,
+         "x":0,
+         "y":0
+        },
+        {
+         "draworder":"topdown",
+         "id":2,
+         "name":"Object Layer",
+         "objects":[
+                {
+                 "height":0,
+                 "id":13,
+                 "name":"fruit2",
+                 "rotation":0,
+                 "type":"fruit",
+                 "visible":true,
+                 "width":0,
+                 "x":46.7997247075017,
+                 "y":144.528561596696
+                },
+                {
+                 "height":0,
+                 "id":14,
+                 "name":"fruit1",
+                 "rotation":0,
+                 "type":"fruit",
+                 "visible":true,
+                 "width":0,
+                 "x":430.832759807295,
+                 "y":400.550584996559
+                },
+                {
+                 "height":0,
+                 "id":15,
+                 "name":"enemy3",
+                 "properties":[
+                        {
+                         "name":"movable",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":623.537508602891,
+                 "y":78.4583620096352
+                },
+                {
+                 "height":0,
+                 "id":23,
+                 "name":"enemy2",
+                 "properties":[
+                        {
+                         "name":"movable",
+                         "type":"string",
+                         "value":"vertical"
+                        }],
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":46.7997247075017,
+                 "y":334.480385409498
+                },
+                {
+                 "height":0,
+                 "id":24,
+                 "name":"enemy1",
+                 "properties":[
+                        {
+                         "name":"movable",
+                         "type":"string",
+                         "value":"horizontal"
+                        }],
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":79.8348245010323,
+                 "y":209.222298692361
+                },
+                {
+                 "height":0,
+                 "id":26,
+                 "name":"enemy4",
+                 "properties":[
+                        {
+                         "name":"movable",
+                         "type":"string",
+                         "value":"horizontal"
+                        }],
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":462.491397109429,
+                 "y":191.328286304198
+                },
+                {
+                 "height":0,
+                 "id":29,
+                 "name":"player",
+                 "rotation":0,
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":627.777777777778,
+                 "y":605.555555555556
+                },
+                {
+                 "height":0,
+                 "id":31,
+                 "name":"enemy5",
+                 "rotation":0,
+                 "type":"enemy",
+                 "visible":true,
+                 "width":0,
+                 "x":59.7222222222222,
+                 "y":604.166666666667
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        },
+        {
+         "draworder":"topdown",
+         "id":3,
+         "name":"EndZones",
+         "objects":[
+                {
+                 "height":0,
+                 "id":11,
+                 "name":"end",
+                 "rotation":0,
+                 "type":"end",
+                 "visible":true,
+                 "width":0,
+                 "x":15.9669134814222,
+                 "y":62.9284237208992
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":4,
+ "nextobjectid":32,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.11.0",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"tileset.tsx",
+          "image":"tileset.png"
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":22
+}
